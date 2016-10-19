@@ -8,18 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var ImpureEvenPipe = (function () {
     function ImpureEvenPipe() {
     }
     ImpureEvenPipe.prototype.transform = function (numbers) {
         return numbers.filter(function (n) { return ((n.value) % 2 == 0); });
     };
+    ImpureEvenPipe = __decorate([
+        core_1.Pipe({ name: 'impureEven', pure: false }), 
+        __metadata('design:paramtypes', [])
+    ], ImpureEvenPipe);
     return ImpureEvenPipe;
 }());
-ImpureEvenPipe = __decorate([
-    core_1.Pipe({ name: 'impureEven', pure: false }),
-    __metadata("design:paramtypes", [])
-], ImpureEvenPipe);
 exports.ImpureEvenPipe = ImpureEvenPipe;
 //# sourceMappingURL=impure-even.pipe.js.map

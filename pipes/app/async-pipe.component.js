@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var AsyncPipeComponent = (function () {
     function AsyncPipeComponent() {
         this.promise = null;
@@ -20,14 +20,14 @@ var AsyncPipeComponent = (function () {
             }, 2000);
         });
     };
+    AsyncPipeComponent = __decorate([
+        core_1.Component({
+            selector: 'async-pipe',
+            template: "\n      <h2>Async Pipe Example</h2>\n      <p>wait... {{promise | async}}</p>\n      <button (click)=\"clickMe()\">Click me to initiate promise</button>\n      "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AsyncPipeComponent);
     return AsyncPipeComponent;
 }());
-AsyncPipeComponent = __decorate([
-    core_1.Component({
-        selector: 'async-pipe',
-        template: "\n      <h2>Async Pipe Example</h2>\n      <p>wait... {{promise | async}}</p>\n      <button (click)=\"clickMe()\">Click me to initiate promise</button>\n      "
-    }),
-    __metadata("design:paramtypes", [])
-], AsyncPipeComponent);
 exports.AsyncPipeComponent = AsyncPipeComponent;
 //# sourceMappingURL=async-pipe.component.js.map

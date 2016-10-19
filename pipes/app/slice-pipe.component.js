@@ -16,7 +16,7 @@ var SlicePipeComponent = (function () {
         this.a_end = 11;
         this.b = 'Los archivos del proyecto están desordenados';
         this.b_start = 0;
-        this.b_end = 28;
+        this.b_end = 44;
     }
     SlicePipeComponent = __decorate([
         core_1.Component({

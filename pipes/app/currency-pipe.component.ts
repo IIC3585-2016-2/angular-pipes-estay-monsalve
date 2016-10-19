@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'currency-pipe',
   template: `
-  <h1>PercentPipe</h1>
+  <h1>CurrencyPipe</h1>
   <div><label>Use:</label> number_expression | currency[:currencyCode[:symbolDisplay[:digitInfo]]]</div>
   <br>
   <a href="https://angular.io/docs/ts/latest/api/common/index/PercentPipe-pipe.html">Docs</a>
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
     <input [(ngModel)]="digitInfo" />
   </div>
 
-  <label>Mostrar CurrencySymbol: <input type="checkbox" ng-model="currencySymbol"></label><br/>
+  <label>Mostrar CurrencySymbol: <input type="checkbox" [(ngModel)]="currencySymbol" /></label><br/>
   <div>CurrencyCode:
   <select [(ngModel)]="currencyCode">
     <option value="USD">USD</option>
@@ -26,6 +26,7 @@ import { Component } from '@angular/core';
   </select></div>
   <div>
     <p>Tengo: {{money | currency:currencyCode:currencySymbol:digitInfo}}</p>
+    <p>Symbol: {{currencySymbol}}</p>
   </div>
   `
 })
@@ -33,5 +34,5 @@ export class CurrencyPipeComponent {
   money: number = 0.259;
   digitInfo: string = '4.3-5';
   currencyCode: string = 'USD';
-  currencySymbol: boolean = false;
+  currencySymbol: boolean = true;
 }

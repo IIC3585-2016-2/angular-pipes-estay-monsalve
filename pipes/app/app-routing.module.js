@@ -8,21 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var currency_pipe_component_1 = require("./currency-pipe.component");
-var i18n_plural_pipe_component_1 = require("./i18n-plural-pipe.component");
-var json_pipe_component_1 = require("./json-pipe.component");
-var pure_json_pipe_component_1 = require("./pure-json-pipe.component");
-var slice_pipe_component_1 = require("./slice-pipe.component");
-var uppercase_pipe_component_1 = require("./uppercase-pipe.component");
-var percent_pipe_component_1 = require("./percent-pipe.component");
-var date_pipe_component_1 = require("./date-pipe.component");
-var binary_pipe_component_1 = require("./binary-pipe.component");
-var concatenate_component_1 = require("./concatenate.component");
-var even_pipe_component_1 = require("./even-pipe.component");
-var impure_even_pipe_component_1 = require("./impure-even-pipe.component");
-var async_pipe_component_1 = require("./async-pipe.component");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var currency_pipe_component_1 = require('./currency-pipe.component');
+var i18n_plural_pipe_component_1 = require('./i18n-plural-pipe.component');
+var json_pipe_component_1 = require('./json-pipe.component');
+var pure_json_pipe_component_1 = require('./pure-json-pipe.component');
+var slice_pipe_component_1 = require('./slice-pipe.component');
+var uppercase_pipe_component_1 = require('./uppercase-pipe.component');
+var percent_pipe_component_1 = require('./percent-pipe.component');
+var date_pipe_component_1 = require('./date-pipe.component');
+var binary_pipe_component_1 = require('./binary-pipe.component');
+var concatenate_component_1 = require('./concatenate.component');
+var even_pipe_component_1 = require('./even-pipe.component');
+var impure_even_pipe_component_1 = require('./impure-even-pipe.component');
+var async_pipe_component_1 = require('./async-pipe.component');
 var routes = [
     { path: '', redirectTo: '/currency', pathMatch: 'full' },
     { path: 'currency', component: currency_pipe_component_1.CurrencyPipeComponent },
@@ -42,14 +42,14 @@ var routes = [
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
+    AppRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [router_1.RouterModule.forRoot(routes)],
+            exports: [router_1.RouterModule]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppRoutingModule);
     return AppRoutingModule;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
-    }),
-    __metadata("design:paramtypes", [])
-], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
 //# sourceMappingURL=app-routing.module.js.map

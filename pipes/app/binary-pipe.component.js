@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var BinaryPipeComponent = (function () {
     function BinaryPipeComponent() {
         this.number = 0;
     }
+    BinaryPipeComponent = __decorate([
+        core_1.Component({
+            selector: 'binary-pipe',
+            template: "\n  <h1>BinaryPipe</h1>\n  <div><label>Use:</label> number_expression | binary</div>\n  <br>\n  <div>\n    <label>Ingrese n\u00FAmero: </label>\n    <input [(ngModel)]=\"number\" />\n  </div>\n  <div>\n    <p>En binario: {{ number | binary }}</p>\n  </div>\n  "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], BinaryPipeComponent);
     return BinaryPipeComponent;
 }());
-BinaryPipeComponent = __decorate([
-    core_1.Component({
-        selector: 'binary-pipe',
-        template: "\n  <h1>BinaryPipe</h1>\n  <div><label>Use:</label> number_expression | binary</div>\n  <br>\n  <div>\n    <label>Ingrese n\u00FAmero: </label>\n    <input [(ngModel)]=\"number\" />\n  </div>\n  <div>\n    <p>En binario: {{ number | binary }}</p>\n  </div>\n  "
-    }),
-    __metadata("design:paramtypes", [])
-], BinaryPipeComponent);
 exports.BinaryPipeComponent = BinaryPipeComponent;
 //# sourceMappingURL=binary-pipe.component.js.map

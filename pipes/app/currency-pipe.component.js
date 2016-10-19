@@ -14,12 +14,12 @@ var CurrencyPipeComponent = (function () {
         this.money = 0.259;
         this.digitInfo = '4.3-5';
         this.currencyCode = 'USD';
-        this.currencySymbol = false;
+        this.currencySymbol = true;
     }
     CurrencyPipeComponent = __decorate([
         core_1.Component({
             selector: 'currency-pipe',
-            template: "\n  <h1>PercentPipe</h1>\n  <div><label>Use:</label> number_expression | currency[:currencyCode[:symbolDisplay[:digitInfo]]]</div>\n  <br>\n  <a href=\"https://angular.io/docs/ts/latest/api/common/index/PercentPipe-pipe.html\">Docs</a>\n  <br>\n  <div>\n    <label>Ingrese cantidad: </label>\n    <input [(ngModel)]=\"money\" />\n  </div>\n  <div>\n    <label>digitInfo: </label>\n    <input [(ngModel)]=\"digitInfo\" />\n  </div>\n\n  <label>Mostrar CurrencySymbol: <input type=\"checkbox\" ng-model=\"currencySymbol\"></label><br/>\n  <div>CurrencyCode:\n  <select [(ngModel)]=\"currencyCode\">\n    <option value=\"USD\">USD</option>\n    <option value=\"CLP\">CLP</option>\n    <option value=\"EUR\">EUR</option>\n  </select></div>\n  <div>\n    <p>Tengo: {{money | currency:currencyCode:currencySymbol:digitInfo}}</p>\n  </div>\n  "
+            template: "\n  <h1>CurrencyPipe</h1>\n  <div><label>Use:</label> number_expression | currency[:currencyCode[:symbolDisplay[:digitInfo]]]</div>\n  <br>\n  <a href=\"https://angular.io/docs/ts/latest/api/common/index/PercentPipe-pipe.html\">Docs</a>\n  <br>\n  <div>\n    <label>Ingrese cantidad: </label>\n    <input [(ngModel)]=\"money\" />\n  </div>\n  <div>\n    <label>digitInfo: </label>\n    <input [(ngModel)]=\"digitInfo\" />\n  </div>\n\n  <label>Mostrar CurrencySymbol: <input type=\"checkbox\" [(ngModel)]=\"currencySymbol\" /></label><br/>\n  <div>CurrencyCode:\n  <select [(ngModel)]=\"currencyCode\">\n    <option value=\"USD\">USD</option>\n    <option value=\"CLP\">CLP</option>\n    <option value=\"EUR\">EUR</option>\n  </select></div>\n  <div>\n    <p>Tengo: {{money | currency:currencyCode:currencySymbol:digitInfo}}</p>\n    <p>Symbol: {{currencySymbol}}</p>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], CurrencyPipeComponent);

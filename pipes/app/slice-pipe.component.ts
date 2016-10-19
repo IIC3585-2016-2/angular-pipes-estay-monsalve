@@ -42,5 +42,5 @@ export class SlicePipeComponent {
   a_end: number = 11;
   b: string = 'Los archivos del proyecto están desordenados';
   b_start: number = 0;
-  b_end: number = 28;
+  b_end: number = 44;
 }
