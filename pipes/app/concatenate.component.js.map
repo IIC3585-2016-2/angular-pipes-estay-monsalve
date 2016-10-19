@@ -1,0 +1,1 @@
+{"version":3,"file":"concatenate.component.js","sourceRoot":"","sources":["concatenate.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,sCAA0C;AAwB1C;IAtBA;QAuBE,aAAQ,GAAG,IAAI,CAAC,GAAG,EAAE,CAAC;QACtB,WAAM,GAAG,QAAQ,CAAA;IACnB,CAAC;IAAD,2BAAC;AAAD,CAAC,AAHD,IAGC;AAHD;IAtBC,gBAAS,CAAC;QACT,QAAQ,EAAE,aAAa;QACvB,QAAQ,EAAE,6vBAkBT;KACF,CAAC;;wBAID;AAHY,+BAAA,oBAAoB,CAAA"}

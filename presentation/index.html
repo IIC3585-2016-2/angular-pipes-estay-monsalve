@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pipes in Angular.js</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/gruvbox-dark.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                  <h1>Pipes</h1>
+                  <div>
+    									<img width="300" height="300" src="pipe_0.png" />
+    							</div>
+                </section>
+                <section>
+                  <h1>Pipes</h1>
+                  <div>
+                    <img width="300" height="300" src="pipe_1.png" />
+                  </div>
+                </section>
+            </section>
+            <section>
+                <h2>{{ value | pipe:param1:param2 }}</h2>
+            </section>
+            <section>
+                <h2>Built-in Pipes</h2>
+                <ul>
+                  <li>
+                    <a href="https://angular.io/docs/ts/latest/api/core/index/PipeTransform-interface.html">Transform (Interface)</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/PercentPipe-pipe.html">Percent</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/UpperCasePipe-pipe.html">UpperCase</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html">Date</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/I18nPluralPipe-pipe.html">I18nPlural</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/DecimalPipe-pipe.html">Decimal</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/I18nSelectPipe-pipe.html">I18nSelect(Experimental)</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/LowerCasePipe-pipe.html">LowerCase</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/SlicePipe-pipe.html">Slice</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/CurrencyPipe-pipe.html">Currency</a></li>
+                    <li><a href="https://angular.io/docs/ts/latest/api/common/index/JsonPipe-pipe.html">Json</a>
+                  </li>
+                  <li><a href="https://angular.io/docs/ts/latest/api/common/index/AsyncPipe-pipe.html">Async</a></li>
+                </ul>
+            </section>
+            <section>
+              <h1>Custom Pipes</h1>
+              <ul>
+                  <li>
+                      <a href="https://angular.io/docs/ts/latest/api/core/index/PipeTransform-interface.html">Interface PipeTransform</a> { <br />
+                        transform(value: any, ...args: any[]) :any <br />
+                      }
+                  </li>
+              </ul>
+            </section>
+            <section>
+              <h1>Concatenate Pipes</h1>
+              <h2>{{ value | pipe1:param1:param2 | pipe2:param3:param4 }}</h2>
+            </section>
+            <section>
+              <h1>Pures vs Impures</h1>
+              <h2>@Pipe({ name: 'impureEven', pure: false })</h2>
+            </section>
+            <section>
+              <h1>Async</h1>
+              <p>Pipe que recibe un Observable o Promise</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            keyboard: true,
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+        Reveal.configure({
+            keyboard: {
+                13: 'next', // go to the next slide when the ENTER key is pressed
+                27: function() {}, // do something custom when ESC is pressed
+                32: function vidplay() {
+                    var video = document.getElementById("video");
+                    if (video.paused == true) video.play();
+                    else video.pause();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
